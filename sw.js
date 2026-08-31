@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cartera-bladi-v1';
+const CACHE_NAME = 'cartera-bladi-v2-privacidad';
 const APP_SHELL = [
   './',
   './index.html',

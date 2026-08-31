@@ -1,40 +1,24 @@
-# Cartera Bladi — PWA lista para GitHub Pages
+# Cartera Bladi — versión pública segura
 
-Esta carpeta ya está preparada para instalar **Cartera Bladi** en el teléfono como una app independiente del navegador.
+Esta carpeta **sí** se puede subir a un repositorio público de GitHub Pages.
 
-## 1. Subir a GitHub
+## Qué queda público
+La interfaz y datos de demostración ficticios. No contiene tus posiciones, cantidades, costos, historial, dividendos ni watchlist real.
 
-1. Crea un repositorio nuevo, por ejemplo `cartera-bladi`.
-2. Sube **todos los archivos de esta carpeta a la raíz del repositorio**.
-3. En GitHub abre **Settings → Pages**.
-4. En **Build and deployment**, selecciona **Deploy from a branch**.
-5. Selecciona la rama **main** y la carpeta **/(root)**, luego **Save**.
-6. GitHub mostrará la URL de Pages cuando termine el despliegue.
+## Qué NO debes subir
+`MIS_DATOS_PRIVADOS_NO_SUBIR.json` contiene tus datos reales. Guárdalo fuera de GitHub.
 
-## 2. Instalar en el celular
+## Publicar
+1. Sube únicamente los archivos de este ZIP al repositorio.
+2. Luego puedes cambiar el repositorio a Public.
+3. Settings → Pages → Deploy from a branch → `main` → `/(root)`.
+4. Abre la URL de GitHub Pages en tu teléfono e instala la PWA.
 
-### iPhone
-1. Abre la URL de GitHub Pages en **Safari** una sola vez.
-2. Pulsa **Compartir**.
-3. Selecciona **Añadir a pantalla de inicio**.
-4. Abre **Cartera Bladi** desde su nuevo icono.
+## Cargar tus datos reales una sola vez
+1. Lleva `MIS_DATOS_PRIVADOS_NO_SUBIR.json` a tu teléfono por un medio privado.
+2. Abre el JSON, selecciona y copia todo el contenido.
+3. En la app entra a **Datos**.
+4. Pega el texto en el campo de respaldo/importación y pulsa **Aplicar/Cargar respaldo**.
+5. La app guardará esos datos en `localStorage` de ese dispositivo. GitHub no recibe esos datos.
 
-### Android
-1. Abre la URL de GitHub Pages una sola vez en Chrome.
-2. Menú **⋮ → Instalar aplicación** o **Agregar a pantalla principal**.
-3. Luego ábrela desde el icono **Cartera Bladi**. Se ejecutará en modo `standalone`, sin la barra normal de Chrome.
-
-## Qué se cambió
-
-- Se fuerza la interfaz limpia de celular (`BareShell`).
-- Se eliminan de la vista instalada el panel explicativo y el marco/simulador de teléfono.
-- Se agregó `manifest.webmanifest`.
-- Se agregó Service Worker para instalación y funcionamiento offline después de la primera carga.
-- Se agregaron iconos 192, 512 y Apple Touch Icon.
-- Los datos continúan guardándose en `localStorage`, igual que en tu versión original.
-
-## Importante sobre tus datos
-
-La aplicación guarda los cambios hechos desde el teléfono **en ese dispositivo/navegador**. Usa la opción de backup de la app antes de borrar datos del navegador, reinstalar o cambiar de teléfono.
-
-Además, si publicas el repositorio y GitHub Pages de forma pública, el HTML y cualquier dato inicial incluido dentro de él pueden ser accesibles para otras personas que tengan la URL o encuentren el repositorio. Para información financiera personal, considera esto antes de hacerlo público.
+Importante: si borras los datos de la app/navegador o cambias de teléfono, necesitarás volver a importar el respaldo privado.
